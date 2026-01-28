@@ -1,6 +1,6 @@
 import time, sys, os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from utils.logger import Logger
+from utils.logger import log
 from audio.recorder import Recorder
 from audio.buffer import Buffer
 from audio.dsp import rms, transient_score, high_freq_ratio
@@ -9,12 +9,11 @@ from audio.dsp import rms, transient_score, high_freq_ratio
 
 SAMPLE_RATE = 44100
 WINDOW_SEC = 0.5
-
 PRINT_EVERY = 0.5
 
 
 def main():
-    logger = Logger('debug_tresholds')
+    logger = log('debug_tresholds')
     recorder = Recorder(
         sample_rate=SAMPLE_RATE,
         chunk_size=1024,
