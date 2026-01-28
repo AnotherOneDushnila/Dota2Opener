@@ -1,0 +1,14 @@
+audio:
+  sample_rate: 44100
+  window_sec: 0.5
+
+dsp:
+  rms_threshold: 0.02
+  hf_ratio: 0.3
+
+model:
+  proba_threshold: 0.9
+
+launcher:
+  cooldown_sec: 10
+  game_path: "Path/to/dota2.exe"
